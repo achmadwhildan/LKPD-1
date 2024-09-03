@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menginput Nama</title>
+</head>
+<body>
+    
+    <body>
+        <input type="search" id="mencari-input" placeholder="Cari...">
+        <button id="mencari-button">Cari</button>
+        <div id="mencari-hasil"></div>
+
+        <script>
+            const mencariInput = document.getElementById('mencari-input');
+            const mencariButton = document.getElementById('mencari-button');
+            const mencariHasil = document.getElementById('mencari-hasil');
+
+            mencariButton.addEventListener('click',() => {
+                const mencariText = mencariInput.value;
+                if (mencariText == ""){
+                    mencariHasil.innerHTML = "silahkan isi data!";
+                } else {
+                    mencariHasil.innerHTML = `Mencari data ${mencariText}....`;
+                }
+            });
+        </script>
+    </body>
+
+</body>
+</html>

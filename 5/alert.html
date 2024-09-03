@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert</title>
+</head>
+
+<style>
+    #denger {
+            display: none;
+            background-color: #f44336; 
+            color: white;
+            padding: 15px;
+            margin-top: 10px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        #munculkanAlertButton {
+            margin-top: 10px;
+            background-color: #4CAF50; 
+            color: white;
+            padding: 15px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+</style>
+
+<body>
+    
+    <div id="denger"><b>Denger!</b>Alert akan tertutup dalam <span id="hitungMundur">5</span></div>
+    <button id="munculkanAlertButton" onclick="munculkanAlert()">Munculkan Alert</button>
+
+    <script>
+        function munculkanAlert(){
+            var hitungMundur = document.getElementById("hitungMundur");
+            var  box = document.getElementById("denger");
+            var hitung = 5; 
+
+            denger.style.display ='block';
+
+            var interval = setInterval(function(){
+                hitungMundur.textContent = hitung;
+                hitung--;
+
+                if(hitung < 0){
+                    clearInterval(interval);
+                    box.style.display = "none";
+                }
+            }, 1000);
+        }
+    </script>
+
+</body>
+</html>

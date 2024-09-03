@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <style>
+        #imageContainer {
+            gap: 2rem;
+            text-align: center;
+            width: 300px;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            margin-left: 200px;
+        }
+        img{
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+
+<body>
+    
+    <div id="imageContainer">
+        <img id="image1" src="image.png" alt="">
+        <img id="image2" src="image.png" alt="">
+        <img id="image3" src="image.png" alt="">
+    </div>
+
+    <form id="form">
+        <label for="pilihGambar">pilih gambar: </label>
+        <select id="pilihGambar">
+            <option value="image1">gambar 1</option>
+            <option value="image2">gambar 2</option>
+            <option value="image3">gambar 3</option>
+        </select>
+
+        <label for="pilihOpacity">pilih opacity: </label>
+        <select id="pilihOpacity">
+            <option value="1">1</option>
+            <option value="0.5">0.5</option>
+            <option value="0.2">0.2</option>
+        </select>
+        <button type="button" onclick="gantiGambarDanOpacity()">kirim</button>
+    </form>
+
+    <script>
+        function gantiGambarDanOpacity(){
+            var gantiImage = document.getElementById("pilihGambar").value;
+            var gantiOpacity = document.getElementById("pilihOpacity").value;
+
+
+            var image = document.getElementById(gantiImage);
+            image.style.opacity = gantiOpacity;
+        }
+    </script>
+
+</body>
+</html>
